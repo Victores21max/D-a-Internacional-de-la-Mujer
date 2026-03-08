@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(145deg, #fdedf5 0%, #f9e1ec 100%);
+  color: #2d2d2d;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER — guiño al lazo del 8M */
+header {
+  background: #b34180;  /* magenta potente */
+  background: linear-gradient(135deg, #b34180, #d1619f);
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 20px rgba(181, 65, 128, 0.3);
+}
+
+header h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.sub-header {
+  font-size: 1.1rem;
+  font-weight: 400;
+  background: rgba(255,255,255,0.2);
+  display: inline-block;
+  padding: 0.5rem 1.8rem;
+  border-radius: 50px;
+  margin-top: 0.8rem;
+  backdrop-filter: blur(4px);
+}
+
+/* contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 20px;
+  flex: 1;
+}
+
+/* sección de imágenes y homenaje */
+.hero-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+
+.card-mujer {
+  background: white;
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 0 20px 30px -8px rgba(190, 80, 120, 0.3);
+  max-width: 320px;
+  padding: 2rem 1.5rem 1.8rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  border: 2px solid rgba(255,215,235,0.7);
+}
+
+.card-mujer:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 40px -10px #c96a9e;
+}
+
+.card-mujer .emoji-gigante {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  filter: drop-shadow(2px 4px 4px #f0a6c5);
+}
+
+.card-mujer h3 {
+  color: #a13e72;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin: 0.7rem 0 0.3rem;
+}
+
+.card-mujer .cita {
+  font-style: italic;
+  color: #5e3a4b;
+  font-weight: 300;
+  font-size: 1rem;
+  border-top: 2px dashed #f3b3d2;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.flor {
+  background: #ffe7f1;
+  border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+  padding: 0.4rem 1rem;
+  width: fit-content;
+  margin: 0.8rem auto 0;
+  font-weight: 600;
+  color: #b33b76;
+}
+
+/* tarjetas de mujeres destacadas (historia) */
+.titulo-seccion {
+  text-align: center;
+  margin: 3.5rem 0 2rem;
+  position: relative;
+}
+
+.titulo-seccion h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  background: linear-gradient(120deg, #ac3370, #cf649b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.titulo-seccion::after {
+  content: "⚢⚢";
+  font-size: 2rem;
+  letter-spacing: 8px;
+  color: #d986b4;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.grid-mujeres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.mujer-item {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  border-radius: 48px 16px 48px 16px;
+  padding: 2rem 1rem 1.5rem;
+  box-shadow: 0 10px 25px #e7b5ce;
+  transition: all 0.2s;
+  border: 2px solid white;
+  text-align: center;
+}
+
+.mujer-item:hover {
+  background: white;
+  border-color: #e391bc;
+}
+
+.mujer-icon {
+  font-size: 3.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.mujer-item h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #99235c;
+}
+
+.mujer-item p {
+  font-size: 0.95rem;
+  color: #3c2a33;
+  padding: 0 0.5rem;
+}
+
+.labor {
+  display: inline-block;
+  background: #9e2b66;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.3rem 1.2rem;
+  border-radius: 40px;
+  margin-top: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* mensaje central */
+.mensaje-8m {
+  background: #fff0f7;
+  border-radius: 80px 20px 80px 20px;
+  padding: 2.5rem 2rem;
+  margin: 3.5rem 0 1rem;
+  border: 3px dotted #e678ae;
+  text-align: center;
+}
+
+.mensaje-8m p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2d1b24;
+}
+
+.mensaje-8m span {
+  background: #fad4e8;
+  padding: 0.2rem 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  color: #a62d6f;
+}
+
+/* footer */
+footer {
+  background: #2e1b26;
+  color: #f2d9e6;
+  text-align: center;
+  padding: 1.8rem 1rem;
+  margin-top: 2rem;
+  font-weight: 300;
+  font-size: 1rem;
+  border-top: 5px solid #cf8eb0;
+}
+
+footer strong {
+  color: #ffbcd9;
+  font-weight: 600;
+}
+
+footer i {
+  color: #f2a7c1;
+}
+
+/* responsividad */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  .titulo-seccion h2 {
+    font-size: 2rem;
+  }
+  .mensaje-8m p {
+    font-size: 1.3rem;
+  }
+  .card-mujer {
+    max-width: 280px;
+  }
+}
+
+/* pequeño detalle de lazos en esquinas */
+.lazo-izq, .lazo-der {
+  position: fixed;
+  opacity: 0.2;
+  font-size: 3rem;
+  pointer-events: none;
+  z-index: 0;
+  bottom: 10px;
+}
+
+.lazo-izq {
+  left: 5px;
+  transform: rotate(-20deg);
+}
+
+.lazo-der {
+  right: 5px;
+  transform: rotate(20deg) scaleX(-1);
+}
